@@ -48,6 +48,81 @@ div.boxhead3{
     background-color: #e5f5e0;
 }
 
-div.bshadow{
+.bshadow{
     box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.3);
+}
+
+img.bimage{
+    width: 100%;
+}
+
+.blur-fade img {
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+/*Options*/
+div.options{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+div.optionholder{
+    padding: 0;
+}
+
+p.option{
+    font-size: 2rem;
+    transition: all .2s;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+p.option:hover{
+    scale: 1.1;
+}
+
+.left{
+    margin-left: 20px;
+}
+
+.right{
+    margin-right: 20px;
+}
+
+hr.uline{
+    margin: 0;
+    height: 3px;
+    background-color: #74c476;
+    border: none;
+    transition: all .2s;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+hr.uline.active {
+  transform: scaleX(1);
+}
+
+/* GENERAL */
+.invisible{
+    visibility: hidden;
 }
