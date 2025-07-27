@@ -28,12 +28,12 @@ div.header{
 }
 
 h2.headtext{
-    margin-bottom: 5px;
+    margin: 0;
     font-size: 3rem;
 }
 
 h3.subtext{
-    margin-top: 0;
+    margin: 0;
     font-size: 2rem;
 }
 
