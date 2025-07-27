@@ -130,6 +130,7 @@ p.option{
     margin-top: 10px;
     cursor: pointer;
     user-select: none;
+    text-align: center;
 }
 
 p.option:hover{
