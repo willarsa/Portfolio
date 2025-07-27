@@ -210,3 +210,44 @@ ul.action{
     display: none;
     opacity: 0%;
 }
+
+/* MOBILE Scaling*/
+@media (max-width: 1160px) {
+  h2.headtext {
+    font-size: 2rem;
+  }
+
+  h3.subtext {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  p.option {
+    font-size: 1.5rem;
+  }
+
+  .pdf {
+    width: 90vw;
+    height: 60vh;
+  }
+
+  .content {
+    margin: 10px;
+  }
+
+  .exppost, ul.action, h3.exp, h2.exp {
+    margin-left: 20px;
+  }
+
+  div.header {
+    padding: 20px 10px;
+  }
+}
