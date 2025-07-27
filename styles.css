@@ -14,6 +14,15 @@ h2, h3{
 }
 
 /*Header*/
+div.headercontainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 10vh;
+    background-color: #74c476;
+}
 
 div.header{
     background-color: #74c476;
@@ -72,19 +81,19 @@ div.boxhead3{
 }
 
 @keyframes box-scaler0{
-    to {height: 8vh}
+    to {height: 6vh}
 }
 
 @keyframes box-scaler1{
-    to {height: 2vh}
+    to {height: 3vh}
 }
 
 @keyframes box-scaler2{
-    to {height: 1vh}
+    to {height: 2vh}
 }
 
 @keyframes box-scaler3{
-    to {height: 0.5vh}
+    to {height: 1.5vh}
 }
 
 .bshadow{
@@ -100,8 +109,8 @@ img.icon{
 }
 
 @keyframes icon-scaler1{
-    to {height: 1.7vh}
-    to {width: 1.7vh}
+    to {height: 2vh}
+    to {width: 2vh}
 }
 
 img.icon:hover{
@@ -121,6 +130,8 @@ div.options{
 
 div.optionholder{
     padding: 0;
+    margin-top: 19vh;
+    width: 100%;
 }
 
 p.option{
@@ -155,6 +166,8 @@ hr.uline{
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
+    max-width: 30%;
+    margin: 0 auto;
 }
 
 hr.uline.active {
