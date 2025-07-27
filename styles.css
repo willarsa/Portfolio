@@ -91,9 +91,16 @@ div.boxhead3{
 }
 
 img.icon{
-    height: 3vh;
-    width: 3vh;
+    height: 2.75vh;
+    width: 2.75vh;
     transition: scale .2s;
+    animation: icon-scaler1 linear;
+    animation-timeline: scroll(root);
+}
+
+@keyframes icon-scaler1{
+    to {height: 2vh}
+    to {width: 2vh}
 }
 
 img.icon:hover{
@@ -166,10 +173,40 @@ div.content{
 div.center{
     display: flex;
     justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: row;
+}
+
+/* CONTENT */
+h3.exp{
+    font-size: 3rem;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+h2.exp{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+div.exppost{
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+
+ul.action{
+    margin-left: 125px;
+    margin: 0;
 }
 
 /* GENERAL */
 .invisible{
     visibility: hidden;
+    opacity: 0%;
+}
+
+.hidden{
+    display: none;
     opacity: 0%;
 }

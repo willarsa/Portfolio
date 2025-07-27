@@ -1,15 +1,15 @@
 function optionClick(elem){
-    lines = document.getElementsByClassName('uline');
-    content = document.getElementsByClassName('content');
+    let lines = document.getElementsByClassName('uline');
+    let wrappers = document.getElementsByName('contentwrapper');
 
     for(let i = 0; i < lines.length; i++){
         if(lines[i] == elem.nextElementSibling){
             lines[i].classList.add('active');
-            content[i].classList.remove('invisible');
+            wrappers[i].classList.remove('hidden');
         }
         else{
             lines[i].classList.remove('active');
-            content[i].classList.add('invisible');
+            wrappers[i].classList.add('hidden');
         }
     }
 }
