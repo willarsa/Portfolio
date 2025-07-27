@@ -14,16 +14,6 @@ h2, h3{
 }
 
 /*Header*/
-div.headercontainer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    height: 10vh;
-    background-color: #74c476;
-}
-
 div.header{
     background-color: #74c476;
     display: flex;
@@ -32,8 +22,8 @@ div.header{
     flex-direction: column;
     height: 10vh;
 
-    animation: box-scaler0 linear;
-    animation-timeline: scroll(root);
+    /*animation: box-scaler0 linear;
+    animation-timeline: scroll(root);*/
 }
 
 h2.headtext{
@@ -45,15 +35,26 @@ h2.headtext{
 h3.subtext{
     margin: 0;
     font-size: 2rem;
+    /*animation: subtext-scaler linear;
+    animation-timeline: scroll(root);*/
 }
+
+/*
+@keyframes subtext-scaler{
+    to {font-size: 1.5rem}
+    to {margin-bottom: 15px}
+}
+/*
+
+/**/
 
 div.boxhead1{
     height: 4vh;
     background-color: #a1d99b;
-    animation: box-scaler1 linear;
+    /* animation: box-scaler1 linear;
     animation-timeline: scroll(root);
     transform-origin: top;
-    transform-box: fill-box;
+    transform-box: fill-box; */
 
     display: flex;
     justify-content: center;
@@ -64,22 +65,23 @@ div.boxhead1{
 div.boxhead2{
     height: 3vh;
     background-color: #c7e9c0;
-    animation: box-scaler2 linear;
+    /* animation: box-scaler2 linear;
     animation-timeline: scroll(root);
     transform-origin: top;
-    transform-box: fill-box;
+    transform-box: fill-box; */
 }
 
 div.boxhead3{
     height: 2vh;
     background-color: #e5f5e0;
 
-    transform-origin: top;
+    /* transform-origin: top;
     transform-box: fill-box;
     animation: box-scaler3 linear;
-    animation-timeline: scroll(root);
+    animation-timeline: scroll(root); */
 }
 
+/*
 @keyframes box-scaler0{
     to {height: 6vh}
 }
@@ -95,6 +97,7 @@ div.boxhead3{
 @keyframes box-scaler3{
     to {height: 1.5vh}
 }
+*/
 
 .bshadow{
     box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.3);
@@ -104,14 +107,16 @@ img.icon{
     height: 2.75vh;
     width: 2.75vh;
     transition: scale .2s;
-    animation: icon-scaler1 linear;
-    animation-timeline: scroll(root);
+    /* animation: icon-scaler1 linear;
+    animation-timeline: scroll(root); */
 }
 
+/*
 @keyframes icon-scaler1{
     to {height: 2vh}
     to {width: 2vh}
 }
+*/
 
 img.icon:hover{
     scale: 1.1;
@@ -130,7 +135,6 @@ div.options{
 
 div.optionholder{
     padding: 0;
-    margin-top: 19vh;
     width: 100%;
 }
 
@@ -388,4 +392,9 @@ img.copy:active{
   div.abouttext{
     font-size: 1rem;
   }
+
+  @keyframes subtext-scaler{
+    to {font-size: 1rem}
+    to {margin-bottom: 15px}
+    }
 }
