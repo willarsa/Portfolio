@@ -16,3 +16,18 @@ function optionClick(elem){
         }
     }
 }
+
+function showEmail(){
+    document.getElementById('email').classList.remove('invisible');
+}
+
+
+function hideEmail(){
+    setTimeout(() => {
+    document.getElementById('email').classList.add('invisible');
+  }, 1500);
+}
+
+function copyToClipboard(){
+    navigator.clipboard.writeText('samuelpwillard@gmail.com');
+}

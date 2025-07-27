@@ -36,7 +36,7 @@
         </div>
         <div class="optionholder right">
             <p class="option" onclick="optionClick(this);">About Me</p>
-            <hr id="aline" class="uline">
+            <hr id="aline" class="active uline">
         </div>
     </div>
     
@@ -89,7 +89,7 @@
                     <li>Developed in HTML, CSS, JS using environments like Node.JS and libraries such as socket.io for server-to-user communication.</li>
                     <li>Depiction was inducted into Rob Hess's Web Development Hall of Fame.</li>
                 </ul>
-                <video width="80%" height="80%" loop autoplay class="gif">
+                <video width="80%" height="80%" autoplay loop controls class="gif">
                     <source src="assets/images/depictionvideo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -108,10 +108,24 @@
         </div>
     </div>
     
-    <div class="contentwrapper hidden" name="contentwrapper">
-        <div class="content" id="aboutme">
-    </div>
-        
+    <div class="contentwrapper centerwrap" name="contentwrapper">
+        <div class="aboutme content" id="aboutme">
+            <div>
+                <img src="assets/images/photo.jpg" alt="This is me!" class="photo">
+            </div>
+            <div class="abouttext">
+                <p>Hi! I'm Sam Willard, a 3rd year computer science and mathematics student at Oregon State University.</p>
+                <p>I've built web apps, created internal auditing tools, and I enjoy both technical and design based programming</p>
+                <p>I'm really into skateboarding, creating board games, playing golf, and putting my ideas into code!</p>
+                <p class="bottom">Feel free to email <span onmouseenter="showEmail();" onmouseleave="hideEmail();"><u class="underline">ME</u></span> at any time!</p>
+                <div class="emailbox">
+                    <div class="invisible subemailbox" id="email">
+                        <p class="email">samuelpwillard@gmail.com</p>
+                        <img src="assets/images/copy.png" class="copy" onclick="copyToClipboard();">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="index.js"></script>

@@ -226,21 +226,102 @@ ul.action{
 
 div.contentwrapper{
     transition: opacity .25s;
-    opacity: 0;
 }
 
-.gif{
-    border: 3px solid #74c476;
+div.centerwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+div.aboutme{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    vertical-align: middle;
+    flex-direction: row;
+}
+
+div.abouttext{
+    margin-left: 15px;
+    max-width: 25vw;
+    font-size: 1.5rem;
+}
+
+p.bottom{
+    margin-bottom: 0;
 }
 
 /* GENERAL */
 .invisible{
-    visibility: hidden;
     opacity: 0%;
+    /*visibility: hidden;*/
 }
 
 .hidden{
-    display: none;
+    display: none !important;
+}
+
+img.photo, .gif{
+    border: 3px solid #74c476;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+img.photo{
+    width: 10vw;
+    height: 15vw;
+    min-width: 200px;
+    min-height: 300px;
+}
+
+u.underline{
+    text-decoration: underline;
+    text-decoration-color: #74c476;
+    text-decoration-thickness: 3px;
+    transition: scale 0.2s;
+    cursor: pointer;
+}
+
+u.underline:hover{
+    text-decoration-thickness: 4px;
+}
+
+.emailbox{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.email{
+    margin: 0;
+    padding: 2px;
+}
+
+.subemailbox{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #74c476;
+    padding: 3px;
+    transition: opacity .2s;
+}
+
+img.copy{
+    min-height: 20px;
+    min-width: 20px;
+    max-height: 30px;
+    max-width: 30px;
+    cursor: pointer;
+}
+
+img.copy:hover{
+    scale: 1.1;
+}
+
+img.copy:active{
+    scale: 1.15;
 }
 
 /* MOBILE Scaling*/
@@ -289,5 +370,9 @@ div.contentwrapper{
 
   div.header {
     padding: 20px 10px;
+  }
+
+  div.abouttext{
+    font-size: 1rem;
   }
 }
