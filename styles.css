@@ -30,6 +30,7 @@ div.header{
 h2.headtext{
     margin: 0;
     font-size: 3rem;
+    text-shadow: 3px 3px 0px #a1d99b;
 }
 
 h3.subtext{
@@ -99,8 +100,8 @@ img.icon{
 }
 
 @keyframes icon-scaler1{
-    to {height: 2vh}
-    to {width: 2vh}
+    to {height: 1.7vh}
+    to {width: 1.7vh}
 }
 
 img.icon:hover{
@@ -180,30 +181,56 @@ div.center{
 }
 
 /* CONTENT */
+div.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 h3.exp{
     font-size: 3rem;
     margin-left: 2%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 h2.exp{
     font-size: 2rem;
     margin-bottom: 5px;
+    text-align: left;
 }
 
-div.exppost{
-    margin-left: 4%;
+.notop{
+    margin-top: 0;
+}
+
+h2.names{
+    font-size: 1.5rem;
     margin-bottom: 5px;
 }
 
+div.exppost{
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
 ul.action{
-    margin-left: 5%;
-    margin: 0;
+    list-style: disc;
+    list-style-position: inside;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    padding-left: 2rem;
+    box-sizing: border-box;
 }
 
 div.contentwrapper{
     transition: opacity .25s;
     opacity: 0;
+}
+
+.gif{
+    border: 3px solid #74c476;
 }
 
 /* GENERAL */
