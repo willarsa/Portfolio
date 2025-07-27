@@ -201,6 +201,11 @@ ul.action{
     margin: 0;
 }
 
+div.contentwrapper{
+    transition: opacity .25s;
+    opacity: 0;
+}
+
 /* GENERAL */
 .invisible{
     visibility: hidden;
@@ -209,7 +214,6 @@ ul.action{
 
 .hidden{
     display: none;
-    opacity: 0%;
 }
 
 /* MOBILE Scaling*/
@@ -246,6 +250,14 @@ ul.action{
 
   .exppost, ul.action, h3.exp, h2.exp {
     margin-left: 20px;
+  }
+
+  h3.exp{
+    font-size: 1.75rem;
+  }
+
+  h2.exp{
+    font-size: 1.5rem;
   }
 
   div.header {
