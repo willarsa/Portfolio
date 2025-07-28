@@ -341,6 +341,12 @@ img.copy:active{
     scale: 1.15;
 }
 
+div.icons{
+    display: flex; 
+    justify-content: center; 
+    gap: 15px;
+}
+
 /* MOBILE Scaling*/
 @media (max-width: 1160px) {
   h2.headtext {
