@@ -1,3 +1,5 @@
+var hasLeft = false;
+
 function optionClick(elem){
     let lines = document.getElementsByClassName('uline');
     let wrappers = document.getElementsByName('contentwrapper');
@@ -23,9 +25,14 @@ function showEmail(){
 
 
 function hideEmail(){
-    setTimeout(() => {
-    document.getElementById('email').classList.add('invisible');
-  }, 1500);
+    if(!hasLeft){
+        hasLeft = true;
+        setTimeout(() => {
+            document.getElementById('email').classList.add('invisible');
+            hasLeft = false;
+        }, 1500);
+    }
+    
 }
 
 function copyToClipboard(){
