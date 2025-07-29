@@ -38,3 +38,20 @@ function hideEmail(){
 function copyToClipboard(){
     navigator.clipboard.writeText('samuelpwillard@gmail.com');
 }
+
+const icons = document.querySelectorAll('.icon');
+var index = 0;
+function randomJump() {
+    if(index >= icons.length){
+        index = 0;
+    }
+    const icon = icons[index];
+    icon.classList.add('jump');
+    setTimeout(() => icon.classList.remove('jump'), 300);
+
+    const delay = Math.random() * 3000 + 1000;
+    setTimeout(randomJump, delay);
+    index++;
+}
+
+randomJump();

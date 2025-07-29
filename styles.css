@@ -103,14 +103,6 @@ div.boxhead3{
     box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.3);
 }
 
-img.icon{
-    height: 2.75vh;
-    width: 2.75vh;
-    transition: scale .2s;
-    /* animation: icon-scaler1 linear;
-    animation-timeline: scroll(root); */
-}
-
 /*
 @keyframes icon-scaler1{
     to {height: 2vh}
@@ -346,6 +338,34 @@ div.icons{
     justify-content: center; 
     gap: 15px;
 }
+
+img.icon{
+    height: 2.75vh;
+    width: 2.75vh;
+    transition: scale .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.jump {
+  animation: jump 0.3s ease;
+}
+
+@keyframes jump {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-8px); }
+  50%  { transform: translateY(0px); }
+  75%  { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+
+.me{
+    display: inline-block;
+    animation: jump 1.2s ease-in-out infinite;
+}
+
 
 /* MOBILE Scaling*/
 @media (max-width: 1160px) {
