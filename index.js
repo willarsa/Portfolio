@@ -39,19 +39,20 @@ function copyToClipboard(){
     navigator.clipboard.writeText('samuelpwillard@gmail.com');
 }
 
-const icons = document.querySelectorAll('.icon');
-var index = 0;
-function randomJump() {
-    if(index >= icons.length){
-        index = 0;
-    }
-    const icon = icons[index];
-    icon.classList.add('jump');
-    setTimeout(() => icon.classList.remove('jump'), 300);
+/* INFINITE 'FUNCTIONS' */
 
-    const delay = Math.random() * 3000 + 1000;
-    setTimeout(randomJump, delay);
-    index++;
+const ripple = document.querySelector('.rippletext');
+const text = ripple.textContent;
+const letters = [...text];
+let html = '';
+
+for (let i = 0; i < letters.length; i++) {
+  const letter = letters[i];
+  const delay = i * 0.1;
+  const isSpace = letter === ' ';
+  const content = isSpace ? '&nbsp;' : letter;
+
+  html += `<span style="--delay: ${delay}s">${content}</span>`;
 }
 
-randomJump();
+ripple.innerHTML = html;

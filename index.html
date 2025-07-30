@@ -19,6 +19,10 @@
     
 
     <div class="options">
+        <div class="optionholder right">
+            <p class="option" onclick="optionClick(this);">About Me</p>
+            <hr id="aline" class="active uline">
+        </div>
         <div class="optionholder left">
             <p class="option" onclick="optionClick(this);">Experience</p>
             <hr id="eline" class="uline">
@@ -31,12 +35,43 @@
             <p class="option" onclick="optionClick(this);">Resume</p>
             <hr id="rline" class="uline">
         </div>
-        <div class="optionholder right">
-            <p class="option" onclick="optionClick(this);">About Me</p>
-            <hr id="aline" class="active uline">
+    </div>
+    
+    <div class="contentwrapper">
+        <div class="centerwrap" name="contentwrapper">
+            <div class="aboutme content" id="aboutme">
+                <div>
+                    <img src="assets/images/photo.jpg" alt="This is me!" class="photo">
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer"><img src="assets/images/linkedin.png" class="icon"></a>
+                        <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer"><img src="assets/images/github.png" class="icon"></a> 
+                    </div>
+                    <p class="undericon rippletext">Check out my Github and LinkedIn!</p>
+                </div>
+                <div class="abouttext">
+                    <p>I'm Sam Willard, a 3rd year computer science and mathematics student at Oregon State University.</p>
+                    <p>I've built web apps, managed databases, and I enjoy both technical and design based programming</p>
+                    <p>I'm really into skateboarding, creating board games, playing golf, and putting my ideas into code!</p>
+                    <p class="bottom">Feel free to email <span class="me" onmouseenter="showEmail();" onmouseleave="hideEmail();"><u class="underline">ME</u></span> at any time!</p>
+                    <div class="emailbox">
+                        <div class="invisible subemailbox" id="email">
+                            <p class="email">samuelpwillard@gmail.com</p>
+                            <img src="assets/images/copy.png" class="copy" onclick="copyToClipboard();">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div style="display: flex; align-items: center; margin: 0; flex-direction: column;">
+            <div style="width: 75%; height: 5px; background-color: #74c476;"></div>
+            <h1>Nature and Friends</h1>
+            <div class="photoscont">
+                
+            </div>
         </div>
     </div>
     
+
     <div class="contentwrapper hidden" name="contentwrapper">
         <div class="column content" id="experience">
             <h3 class="exp">Internships</h3>
@@ -82,7 +117,7 @@
                 <h3 class="exp">Depiction</h3>
                 <h2 class="names notop"><i>Sam Willard, Ethan Harter, Rose Farrens</i></h2>
                 <ul class="action">
-                    <li>Depiction is a drawing game based on Telestrations and Gartic Phone that combines elements of Telephone and Pictionary.</li>
+                    <li>Depiction is a multiplayer drawing game based on Telestrations and Gartic Phone that combines elements of Telephone and Pictionary.</li>
                     <li>Developed in HTML, CSS, JS using environments like Node.JS and libraries such as socket.io for server-to-user communication.</li>
                     <li>Depiction was inducted into Rob Hess's Web Development Hall of Fame.</li>
                 </ul>
@@ -95,33 +130,9 @@
     </div>
     
         
-    <div class="contentwrapper hidden" name="contentwrapper">
+    <div class="contentwrapper hidden" name="contentwrapper" id="resumeholder">
         <div class="content center" id="resume">
             <embed src="assets/images/resume.pdf#navpanes=0&scrollbar=0" type="application/pdf" class="pdf"/>
-        </div>
-    </div>
-    
-    <div class="contentwrapper centerwrap" name="contentwrapper">
-        <div class="aboutme content" id="aboutme">
-            <div>
-                <img src="assets/images/photo.jpg" alt="This is me!" class="photo">
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer"><img src="assets/images/linkedin.png" class="icon"></a>
-                    <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer"><img src="assets/images/github.png" class="icon"></a> 
-                </div>
-            </div>
-            <div class="abouttext">
-                <p>I'm Sam Willard, a 3rd year computer science and mathematics student at Oregon State University.</p>
-                <p>I've built web apps, created internal auditing tools, and I enjoy both technical and design based programming</p>
-                <p>I'm really into skateboarding, creating board games, playing golf, and putting my ideas into code!</p>
-                <p class="bottom">Feel free to email <span class="me" onmouseenter="showEmail();" onmouseleave="hideEmail();"><u class="underline">ME</u></span> at any time!</p>
-                <div class="emailbox">
-                    <div class="invisible subemailbox" id="email">
-                        <p class="email">samuelpwillard@gmail.com</p>
-                        <img src="assets/images/copy.png" class="copy" onclick="copyToClipboard();">
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

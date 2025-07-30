@@ -21,9 +21,6 @@ div.header{
     align-items: center;
     flex-direction: column;
     height: 10vh;
-
-    /*animation: box-scaler0 linear;
-    animation-timeline: scroll(root);*/
 }
 
 h2.headtext{
@@ -35,26 +32,11 @@ h2.headtext{
 h3.subtext{
     margin: 0;
     font-size: 2rem;
-    /*animation: subtext-scaler linear;
-    animation-timeline: scroll(root);*/
 }
-
-/*
-@keyframes subtext-scaler{
-    to {font-size: 1.5rem}
-    to {margin-bottom: 15px}
-}
-/*
-
-/**/
 
 div.boxhead1{
     height: 4vh;
     background-color: #a1d99b;
-    /* animation: box-scaler1 linear;
-    animation-timeline: scroll(root);
-    transform-origin: top;
-    transform-box: fill-box; */
 
     display: flex;
     justify-content: center;
@@ -65,50 +47,16 @@ div.boxhead1{
 div.boxhead2{
     height: 3vh;
     background-color: #c7e9c0;
-    /* animation: box-scaler2 linear;
-    animation-timeline: scroll(root);
-    transform-origin: top;
-    transform-box: fill-box; */
 }
 
 div.boxhead3{
     height: 2vh;
     background-color: #e5f5e0;
-
-    /* transform-origin: top;
-    transform-box: fill-box;
-    animation: box-scaler3 linear;
-    animation-timeline: scroll(root); */
 }
-
-/*
-@keyframes box-scaler0{
-    to {height: 6vh}
-}
-
-@keyframes box-scaler1{
-    to {height: 3vh}
-}
-
-@keyframes box-scaler2{
-    to {height: 2vh}
-}
-
-@keyframes box-scaler3{
-    to {height: 1.5vh}
-}
-*/
 
 .bshadow{
     box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.3);
 }
-
-/*
-@keyframes icon-scaler1{
-    to {height: 2vh}
-    to {width: 2vh}
-}
-*/
 
 img.icon:hover{
     scale: 1.1;
@@ -178,7 +126,7 @@ hr.uline.active {
 
 div.content{
     margin-top: 25px;
-    transition: opacity .2s;
+    transition: opacity .75s;
 }
 
 div.center{
@@ -234,14 +182,14 @@ ul.action{
 }
 
 div.contentwrapper{
-    transition: opacity .25s;
+    transition: opacity .75s;
 }
 
 div.centerwrap{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 40vh;
 }
 
 div.aboutme{
@@ -253,7 +201,7 @@ div.aboutme{
 }
 
 div.abouttext{
-    margin-left: 15px;
+    margin-left: 20px;
     max-width: 25vw;
     font-size: 1.5rem;
 }
@@ -282,6 +230,8 @@ img.photo{
     height: 15vw;
     min-width: 200px;
     min-height: 300px;
+    z-index: 2;
+    position: relative;
 }
 
 u.underline{
@@ -337,6 +287,7 @@ div.icons{
     display: flex; 
     justify-content: center; 
     gap: 15px;
+    margin-top: 7px;
 }
 
 img.icon{
@@ -349,23 +300,51 @@ img.icon{
     transition: all 0.3s ease;
 }
 
-.jump {
-  animation: jump 0.3s ease;
+.undericon{
+    margin-top: 2px;
+    text-align: center;
+}
+
+
+.jumpbean{
+    animation: jump 0.4s ease;
 }
 
 @keyframes jump {
-  0%   { transform: translateY(0); }
-  25%  { transform: translateY(-8px); }
-  50%  { transform: translateY(0px); }
-  75%  { transform: translateY(8px); }
-  100% { transform: translateY(0); }
+    0%   { transform: translateY(-3px); }
+  50%  { transform: translateY(3px); }
+  100% { transform: translateY(-3px); }
 }
+
 
 .me{
     display: inline-block;
-    animation: jump 1.2s ease-in-out infinite;
+    animation: jump 1.2s infinite ease-in-out;
+    will-change: transform;
 }
 
+.rippletext span {
+  display: inline-block;
+  animation: ripple 3.5s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.ripple-text {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #3498db;
+  letter-spacing: 2px;
+}
+
+@keyframes ripple {
+  0%, 25%, 50%, 75%, 100% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-3px);
+  }
+}
 
 /* MOBILE Scaling*/
 @media (max-width: 1160px) {
