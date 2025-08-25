@@ -1,4 +1,4 @@
-var hasLeft = false;
+var hovering = false;
 
 function optionClick(elem){
     let lines = document.getElementsByClassName('uline');
@@ -21,18 +21,20 @@ function optionClick(elem){
 
 function showEmail(){
     document.getElementById('email').classList.remove('invisible');
+    hovering = true;
 }
 
 
 function hideEmail(){
-    if(!hasLeft){
-        hasLeft = true;
+    hovering = false;
+    if(!hovering){
         setTimeout(() => {
-            document.getElementById('email').classList.add('invisible');
-            hasLeft = false;
+            if(!hovering){
+                document.getElementById('email').classList.add('invisible');
+            }
+            
         }, 1500);
     }
-    
 }
 
 function copyToClipboard(){
