@@ -24,10 +24,10 @@ header{
     border-bottom: 3px solid #F3DE2C;
 }
 
-main {
-      flex: 1;
-      padding: 20px;
-    }
+main{
+    flex: 1;
+    padding: 0;
+}
 
 footer{
     background-color: #5C8001;
