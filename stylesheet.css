@@ -154,3 +154,7 @@ span.cmd{
     margin: 3px;
     border: 2px solid #FBB02D;
 }
+
+.pointer{
+    cursor: pointer;
+}

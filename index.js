@@ -52,8 +52,18 @@ document.addEventListener("keydown", async function(e) {
     }
 });
 
+async function copyTextToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Text copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+}
+
 async function addConsoleLine(text, check){
     if(check != 1) cmd.parentElement.removeChild(cmd);
+    if(check == 2) copyTextToClipboard("samuelpwillard@gmail.com");
     var display = document.createElement("p");
     display.textContent = "";
     document.getElementById("about").appendChild(display);
@@ -63,3 +73,5 @@ async function addConsoleLine(text, check){
     }
     display.appendChild(cmd);
 }
+
+
