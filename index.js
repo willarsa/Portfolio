@@ -34,7 +34,7 @@ function pause (milliseconds) {
 
 document.addEventListener("keydown", async function(e) {
     if(lines.length > 0){
-       cmd.parentElement.removeChild(cmd);
+        cmd.parentElement.removeChild(cmd);
 
         if(e.key == "Enter"){
             var text = lines.shift();
@@ -45,12 +45,9 @@ document.addEventListener("keydown", async function(e) {
 
 about.ontouchstart = function(){
     if(lines.length > 0){
-       cmd.parentElement.removeChild(cmd);
-
-        if(e.key == "Enter"){
-            var text = lines.shift();
-            addConsoleLine(text, 1);
-        } 
+        cmd.parentElement.removeChild(cmd);
+        var text = lines.shift();
+        addConsoleLine(text, 1);
     }
 };
 
