@@ -81,10 +81,10 @@ div.project:hover{
     box-shadow: 0 0 15px #FB6107;
 }
 
-div.project:active{
+/*div.project:active{
     transform: translateY(-5px);
     box-shadow: 0 0 15px #FB6107;
-}
+}*/
 
 h2{
     color: #FBB02D;
