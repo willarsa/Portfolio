@@ -8,58 +8,60 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <header>SAM WILLARD</header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <main>
+        <header>SAM WILLARD</header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <section id="about">
-        <h2>ABOUT</h2>
-        <p>Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University</p>
-        <p>My focus for CS is in Computer Systems, learning a lot about lower-level hardware and it's implementations.</p>
-    </section>
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p>Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University</p>
+            <p>My focus for CS is in Computer Systems, learning a lot about lower-level hardware and it's implementations.</p>
+        </section>
 
-    <section id="projects" class="below">
-        <h2>PROJECTS</h2>
-        <div class="projects">
-            <div class="project">
-                <div id="depiction_desc">
-                    <h3>Depiction</h3>
-                    <p>Inspired by Telestrations and Gartic Phone</p>
-                    <p>A multiplayer drawing game built with JavaScript, Socket.io, Handlebars, and Canvas. Inducted into my web dev class’s hall of fame.</p>
-                    
+        <section id="projects" class="below">
+            <h2>PROJECTS</h2>
+            <div class="projects">
+                <div class="project">
+                    <div id="depiction_desc">
+                        <h3>Depiction</h3>
+                        <p>Inspired by Telestrations and Gartic Phone</p>
+                        <p>A multiplayer drawing game built with JavaScript, Socket.io, Handlebars, and Canvas. Inducted into my web dev class’s hall of fame.</p>
+                        
+                    </div>
+                    <div id="depiction_vid" class="hidden">
+                        <video autoplay loop controls class="video" playsinline webkit-playsinline>
+                            <source src="assets/depictionvideo.mp4" type="video/mp4">
+                            Your browser does not the video :|
+                        </video>
+                    </div>
+                    <a class="link" href="https://github.com/osu-cs290-f24/final-project-the-dominators/blob/main/README.md" target="_blank" rel="noopener noreferrer">To github...</a>
+                    <p class="link" id="depiction_toggle" onclick="toggle('depiction');">Show video...</p>
                 </div>
-                <div id="depiction_vid" class="hidden">
-                    <video autoplay loop controls class="video" playsinline webkit-playsinline>
-                        <source src="assets/depictionvideo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="project">
+                    <h3>SODA (Segregation of Duties Analysis)</h3>
+                    <p>A internal auditing tool developed during my internship at TTM Technologies.</p>
+                    <p>Uses HTML, CSS, and Javascript to create an effecient user friendly interface,
+                    PL/SQL to query the Oracle database,
+                    and PHP to bridge the gap between the interface and the database.</p>
+                    <p class="bold">No image/video may be shown due to privacy issues.</p>
                 </div>
-                <a class="link" href="https://github.com/osu-cs290-f24/final-project-the-dominators/blob/main/README.md" target="_blank" rel="noopener noreferrer">To github...</a>
-                <p class="link" id="depiction_toggle" onclick="toggle('depiction');">Show video...</p>
             </div>
-            <div class="project">
-                <h3>SODA (Segregation of Duties Analysis)</h3>
-                <p>A internal auditing tool developed during my internship at TTM Technologies.</p>
-                <p>Uses HTML, CSS, and Javascript to create an effecient user friendly interface,
-                PL/SQL to query the Oracle database,
-                and PHP to bridge the gap between the interface and the database.</p>
-                <p class="bold">No image/video may be shown due to privacy issues.</p>
-            </div>
-        </div>
-        
-    </section>
+            
+        </section>
 
-    <section id="contact" class="below">
-        <h2>CONTACT</h2>
-        <p>Feel free to email me at <span id="email" class="email">samuelpwillard@gmail.com</span></p>
-        <div class="icons">
-            <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.png" class="icon"></a>
-            <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer"><img src="assets/github3.png" class="icon"></a>
-        </div>
-    </section>
+        <section id="contact" class="below">
+            <h2>CONTACT</h2>
+            <p>Feel free to email me at <span id="email" class="email">samuelpwillard@gmail.com</span></p>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.png" class="icon"></a>
+                <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer"><img src="assets/github3.png" class="icon"></a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy 2025 Sam Willard | Portfolio<span class="cmd">_</span></p>
