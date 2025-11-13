@@ -17,6 +17,17 @@ header{
     border-bottom: 3px solid #F3DE2C;
 }
 
+footer{
+    background-color: #5C8001;
+    color: #0a0a0a;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 2em;
+    border-top: 3px solid #7CB518;
+}
+
+
 nav{
     background-color: #5C8001;
     display: flex;
@@ -50,6 +61,7 @@ section.below{
 
 span.email{
     color: #FB6107;
+    cursor: pointer;
 }
 
 div.icons{
@@ -70,4 +82,12 @@ img.icon:hover{
 
 img.icon:active{
     scale: 1.1;
+}
+
+span.cmd{
+    animation: cmd 1s step-end infinite; 
+}
+
+@keyframes cmd {
+    50% { opacity: 0; }
 }
