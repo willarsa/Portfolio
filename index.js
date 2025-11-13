@@ -47,5 +47,16 @@ document.addEventListener("keydown", async function(e) {
             display.appendChild(cmd);
         } 
     }
-    
 });
+
+async function addConsoleLine(text){
+    cmd.parentElement.removeChild(cmd);
+    var display = document.createElement("p");
+    display.textContent = "";
+    document.getElementById("about").appendChild(display);
+    for(let i = 0; i < text.length; i++){
+        display.textContent += text.charAt(i);
+        await pause(15);
+    }
+    display.appendChild(cmd);
+}
