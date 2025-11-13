@@ -3,9 +3,13 @@ cmd.id = "cmd";
 cmd.textContent = "_";
 cmd.classList.add("cmd");
 
+var console_running = 0;
+
 var about;
 
 var lines = ["Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University",
+             "My focus for CS is in Computer Systems, where I'm learning a lot about lower-level hardware and it's implementations"];
+const lines_dup = ["Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University",
              "My focus for CS is in Computer Systems, where I'm learning a lot about lower-level hardware and it's implementations"];
 
 function toggle(project){
@@ -42,14 +46,16 @@ function pause (milliseconds) {
 }
 
 document.addEventListener("keydown", async function(e) {
-    if(lines.length > 0){
-        cmd.parentElement.removeChild(cmd);
-
-        if(e.key == "Enter"){
-            var text = lines.shift();
-            addConsoleLine(text, 1);
-        } 
+    if(console_running == 0){
+        if(lines.length > 0){
+            if(e.key == "Enter"){
+                cmd.parentElement.removeChild(cmd);
+                var text = lines.shift();
+                addConsoleLine(text, 1);
+            } 
+        }
     }
+    
 });
 
 async function copyTextToClipboard(text) {
@@ -61,24 +67,34 @@ async function copyTextToClipboard(text) {
 }
 
 async function addConsoleLine(text, check){
-    if(check != 1) cmd.parentElement.removeChild(cmd);
-    if(check == 2) copyTextToClipboard("samuelpwillard@gmail.com");
-    var display = document.createElement("p");
-    display.textContent = "";
-    document.getElementById("about").appendChild(display);
-    for(let i = 0; i < text.length; i++){
-        display.textContent += text.charAt(i);
-        await pause(15);
+    if(console_running == 0){
+        console_running = 1;
+        if(check != 1) cmd.parentElement.removeChild(cmd);
+        if(check == 2) copyTextToClipboard("samuelpwillard@gmail.com");
+        var display = document.createElement("p");
+        display.textContent = "";
+        document.getElementById("about").appendChild(display);
+        for(let i = 0; i < text.length; i++){
+            display.textContent += text.charAt(i);
+            await pause(15);
+        }
+        display.appendChild(cmd);
+        console_running = 0;
     }
-    display.appendChild(cmd);
+    
 }
 
 function clearConsole(){
-    for(let i = about.children.length - 1; i >= 0; i--){
+    console.log("Clearing!");
+    if(console_running == 0){
+        for(let i = about.children.length - 1; i >= 0; i--){
         if(i != 0){
             about.children[i].remove();
         }
+        }
+        about.appendChild(cmd);
+
+        lines = lines_dup.slice();
     }
-    about.appendChild(cmd);
 }
 
