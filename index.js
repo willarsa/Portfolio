@@ -31,26 +31,18 @@ function pause (milliseconds) {
 }
 
 document.addEventListener("keydown", async function(e) {
-    //Remove Span From It's Parent
     if(lines.length > 0){
        cmd.parentElement.removeChild(cmd);
 
         if(e.key == "Enter"){
-            var display = document.createElement("p");
-            display.textContent = "";
-            document.getElementById("about").appendChild(display);
             var text = lines.shift();
-            for(let i = 0; i < text.length; i++){
-                display.textContent += text.charAt(i);
-                await pause(15);
-            }
-            display.appendChild(cmd);
+            addConsoleLine(text, 1);
         } 
     }
 });
 
-async function addConsoleLine(text){
-    cmd.parentElement.removeChild(cmd);
+async function addConsoleLine(text, check){
+    if(check != 1) cmd.parentElement.removeChild(cmd);
     var display = document.createElement("p");
     display.textContent = "";
     document.getElementById("about").appendChild(display);
