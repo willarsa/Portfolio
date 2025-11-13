@@ -55,7 +55,6 @@ document.addEventListener("keydown", async function(e) {
 async function copyTextToClipboard(text) {
   try {
     await navigator.clipboard.writeText(text);
-    console.log('Text copied to clipboard');
   } catch (err) {
     console.error('Failed to copy text: ', err);
   }
@@ -74,4 +73,12 @@ async function addConsoleLine(text, check){
     display.appendChild(cmd);
 }
 
+function clearConsole(){
+    for(let i = about.children.length - 1; i >= 0; i--){
+        if(i != 0){
+            about.children[i].remove();
+        }
+    }
+    about.appendChild(cmd);
+}
 
