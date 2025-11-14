@@ -3,6 +3,8 @@ cmd.id = "cmd";
 cmd.textContent = "_";
 cmd.classList.add("cmd");
 
+var interactive_arr = [];
+
 var console_running = 0;
 
 var about;
@@ -71,11 +73,24 @@ async function copyTextToClipboard(text) {
   }
 }
 
+function checkInteractiveArray(){
+    if(!interactive_arr.includes(-1)){
+        if(interactive_arr.length == 4){
+            interactive_arr.push(-1);
+            addConsoleLine('Thanks for checking out the whole website!');
+        }
+    }
+    
+}
+
 async function addConsoleLine(text, check){
     if(console_running == 0){
         console_running = 1;
         if(check != 1) cmd.parentElement.removeChild(cmd);
         if(check == 2) copyTextToClipboard("samuelpwillard@gmail.com");
+        if (!interactive_arr.includes(check)) {
+            interactive_arr.push(check);
+        }
         var display = document.createElement("p");
         display.textContent = "";
         document.getElementById("about").appendChild(display);
@@ -86,7 +101,7 @@ async function addConsoleLine(text, check){
         display.appendChild(cmd);
         console_running = 0;
     }
-    
+    checkInteractiveArray();
 }
 
 function clearConsole(){
