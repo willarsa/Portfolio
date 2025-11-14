@@ -76,6 +76,7 @@ div.project{
     cursor: pointer;
 }
 
+
 div.project:hover{
     transform: translateY(-8px);
     box-shadow: 0 0 15px #FB6107;
@@ -158,6 +159,10 @@ span.cmd{
 
 .hidden{
     display: none;
+}
+
+.transparent{
+    opacity: 0;
 }
 
 .video{
