@@ -8,9 +8,11 @@ var console_running = 0;
 var about;
 
 var lines = ["Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University",
-             "My focus for CS is in Computer Systems, where I'm learning a lot about lower-level hardware and it's implementations"];
-const lines_dup = ["Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University",
-             "My focus for CS is in Computer Systems, where I'm learning a lot about lower-level hardware and it's implementations"];
+             "My focus for CS is in computer systems, where I'm learning a lot about low-level hardware and it's software implementations",
+             "I have strong passion for embedded software, game, and web development, and I enjoy taking on projects that challenge me to learn something new"];
+const lines_dup  = ["Hello, I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University",
+             "My focus for CS is in computer systems, where I'm learning a lot about low-level hardware and it's software implementations",
+             "I have strong passion for embedded software, game, and web development, and I enjoy taking on projects that challenge me to learn something new"];
 
 function toggle(project){
     var toggle = document.getElementById(project + "_toggle");
@@ -30,7 +32,10 @@ function toggle(project){
 
 document.addEventListener("DOMContentLoaded", function(){
     about = document.getElementById("about");
-    about.appendChild(cmd);
+    let enter = document.createElement("p");
+    enter.textContent = "Press enter";
+    enter.appendChild(cmd); 
+    about.appendChild(enter);
 
     about.ontouchstart = function(){
         if(lines.length > 0){

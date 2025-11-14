@@ -20,9 +20,11 @@
 
         <section>
             <div id="about" style="margin-bottom: 25px;">
-                <h2>ABOUT</h2>
+                <div class="terminaldiv" style="display: flex; justify-content: space-between; align-content: center;">
+                    <h2 class="terminalh2">ABOUT</h2>
+                    <a class="link clear" onclick="clearConsole();">clear</a>
+                </div>
             </div>
-            <a class="link" onclick="clearConsole();">clear</a>
         </section>
         
 
@@ -61,8 +63,8 @@
             <h2>CONTACT</h2>
             <p>Feel free to email me at <span id="email" class="email" onclick="addConsoleLine('Copied email to clipboard', 2)">samuelpwillard@gmail.com</span></p>
             <div class="icons">
-                <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.png" class="icon"></a>
-                <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer"><img src="assets/github3.png" class="icon"></a>
+                <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer" onclick="addConsoleLine('Opened LinkedIn', 3)"><img src="assets/linkedin.png" class="icon"></a>
+                <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer" onclick="addConsoleLine('Opened GitHub', 4)"><img src="assets/github3.png" class="icon"></a>
             </div>
         </section>
     </main>
