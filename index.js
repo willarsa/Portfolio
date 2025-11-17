@@ -86,6 +86,7 @@ function checkInteractiveArray(){
 async function addConsoleLine(text, check){
     if(console_running == 0){
         console_running = 1;
+        popLine();
         if(check != 1) cmd.parentElement.removeChild(cmd);
         if(check == 2) copyTextToClipboard("samuelpwillard@gmail.com");
         if (!interactive_arr.includes(check)) {
@@ -105,7 +106,6 @@ async function addConsoleLine(text, check){
 }
 
 function clearConsole(){
-    console.log("Clearing!");
     if(console_running == 0){
         for(let i = about.children.length - 1; i >= 0; i--){
         if(i != 0){
@@ -115,6 +115,12 @@ function clearConsole(){
         about.appendChild(cmd);
         
         lines = lines_dup.slice();
+    }
+}
+
+function popLine(){
+    if(about.children.length > 5){
+        about.children[1].remove();
     }
 }
 
