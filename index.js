@@ -113,8 +113,16 @@ function clearConsole(){
         }
         }
         about.appendChild(cmd);
-
+        
         lines = lines_dup.slice();
     }
 }
 
+function scrollToSection(element){
+    var elem = document.getElementById(element);
+    if(!elem) return;
+    window.scrollTo({
+        top: elem.offsetTop,
+        behavior: 'smooth'
+    });
+}
