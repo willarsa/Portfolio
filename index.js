@@ -58,6 +58,15 @@ function pause (milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
+function scrollToSection(element){
+    var elem = document.getElementById(element);
+    if(!elem) return;
+    window.scrollTo({
+        top: elem.offsetTop,
+        behavior: 'smooth'
+    });
+}
+
 function returnWord(str, index) {
   const words = str.trim().split(/\s+/);
   if(index < words.length){
@@ -180,7 +189,7 @@ document.addEventListener("keydown", async function(e) {
         currline = "";
         newCmd();
         const container = document.querySelector('.about');
-        container.scrollTop = container.scrollHeight;
+        container.scrollTop = container.scrollHeight + 16;
     }
     
     nextline.textContent = user + ": " + currline;
