@@ -179,7 +179,8 @@ span.cmd{
 
 div.about{
     margin-bottom: 25px;
-    max-height: 25em;
+    height: 15em;
+    max-height: 15em;
     overflow: auto;
     padding-bottom:0;
 }
