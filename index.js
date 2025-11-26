@@ -187,9 +187,9 @@ document.addEventListener("keydown", async function(e) {
     nextline.appendChild(cmd);
 });
 
-async function copyTextToClipboard(text) {
+async function copyTextToClipboard() {
   try {
-    await navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText("samuelpwillard@gmail.com");
   } catch (err) {
     console.error('Failed to copy text: ', err);
   }
