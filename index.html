@@ -16,18 +16,23 @@
             <a onclick="scrollToSection('experience');">Experience</a>
             <a onclick="scrollToSection('contact');">Contact</a>
             <a> | </a>
-            <a href="assets/resume-1.pdf" target="_blank" rel="noopener noreferrer" class="pointer" onclick="addConsoleLine('Opened resume', 0)">Resume</a>
+            <a href="assets/resume-1.pdf" target="_blank" rel="noopener noreferrer" class="pointer">Resume</a>
         </nav>
 
-        <section>
+        <!-- <section>
             <div id="about" style="margin-bottom: 25px;">
                 <div class="terminaldiv" style="display: flex; justify-content: space-between; align-content: center;">
                     <h2 class="terminalh2">ABOUT</h2>
                     <a class="link clear" onclick="clearConsole();">clear</a>
                 </div>
             </div>
+        </section> -->
+
+        <section>
+            <h2 class="terminalh2">ABOUT</h2>
+            <div class="terminaldiv"></div>
+            <div id="about2" class="about"></div>
         </section>
-        
 
         <section id="projects" class="below">
             <h2>PROJECTS</h2>
@@ -95,10 +100,10 @@
 
         <section id="contact" class="below">
             <h2>CONTACT</h2>
-            <p>Feel free to email me at <span id="email" class="email" onclick="addConsoleLine('Copied email to clipboard', 2)">samuelpwillard@gmail.com</span></p>
+            <p>Feel free to email me at <span id="email" class="email">samuelpwillard@gmail.com</span></p>
             <div class="icons">
-                <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer" onclick="addConsoleLine('Opened LinkedIn', 3)"><img src="assets/linkedin.png" class="icon"></a>
-                <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer" onclick="addConsoleLine('Opened GitHub', 4)"><img src="assets/github3.png" class="icon"></a>
+                <a href="https://www.linkedin.com/in/sam-willard-049956339/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.png" class="icon"></a>
+                <a href="https://github.com/willarsa" target="_blank" rel="noopener noreferrer"><img src="assets/github3.png" class="icon"></a>
             </div>
         </section>
     </main>
