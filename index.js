@@ -188,8 +188,11 @@ document.addEventListener("keydown", async function(e) {
 
         currline = "";
         newCmd();
+        nextline.textContent = user + ": " + currline;
+        nextline.appendChild(cmd);
         const container = document.querySelector('.about');
-        container.scrollTop = container.scrollHeight + 16;
+        container.scrollTop = container.scrollHeight;
+        return;
     }
     
     nextline.textContent = user + ": " + currline;
