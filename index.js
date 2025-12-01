@@ -116,7 +116,7 @@ document.addEventListener("keydown", async function(e) {
             var line = document.createElement("p");
             line.innerHTML = "help: lists all available commands<br>" + 
                         "about: gives a brief description of me and my passions!<br>" + 
-                        "signin [username]: allows you to enter your username for the terminal.<br>" + 
+                        "setname [username]: allows you to enter your username for the terminal.<br>" + 
                         "time: displays the current time.<br>" + 
                         "clear: clears the terminal.<br>" +
                         "echo [sentence]: outputs sentence to the terminal.<br>" + 
@@ -126,11 +126,11 @@ document.addEventListener("keydown", async function(e) {
         else if(first == "about"){
             var line = document.createElement("p");
             line.innerHTML = "Hello" + (user == "???" ? "" : " " + user) + ", I'm Sam Willard, a 3rd year computer science and mathematics honors student at Oregon State University.<br><br>" +
-            "My focus for CS is in computer systems, where I'm learning a lot about low-level hardware and it's software implementations.<br><br>" +
+            "My focus for CS is in computer systems, where I'm learning a lot about low-level hardware and its software implementations.<br><br>" +
             "I have strong passion for embedded software, game, and web development, and I enjoy taking on projects that challenge me to learn something new!";
             about.appendChild(line);
         }
-        else if(first == "signin"){
+        else if(first == "setname"){
             user = returnWord(currline, 1);
         }
         else if(first == "time"){
