@@ -175,7 +175,6 @@ document.addEventListener("keydown", async function(e) {
             if(name != null && value != null){
                 var variable = [name, value];
                 variables.unshift(variable);
-                console.log(variables);
             }
         }
         else if(first == ""){
