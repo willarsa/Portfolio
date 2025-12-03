@@ -96,6 +96,7 @@ async function replaceKeyword(str) {
             }
         }
     }
+    
     return words.join(" ");
 }
 
@@ -168,7 +169,7 @@ document.addEventListener("keydown", async function(e) {
             var value = "";
             let i = 2;
             while(returnWord(currline, i) != null){
-                value += returnWord(currline, i);
+                value += returnWord(currline, i) + " ";
                 i++;
             }
             if(name != null && value != null){
