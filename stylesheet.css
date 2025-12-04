@@ -97,8 +97,24 @@ h2.terminalh2{
     margin-top: 1rem;
 }
 
-div.terminaldiv{
+div.terminaldiv1{
+    border-top: 2px solid #7CB518;
+    border-left: 2px solid #7CB518;
+    border-right: 2px solid #7CB518;
+    margin-bottom: 2px;
+    height: 5px;
+}
+
+div.terminaldiv2{
     border-bottom: 2px solid #7CB518;
+    border-left: 2px solid #7CB518;
+    border-right: 2px solid #7CB518;
+    margin-top: 2px;
+    height: 5px;
+}
+
+div.bconsole{
+    margin-bottom: 25px;
 }
 
 .clear{
@@ -178,7 +194,7 @@ span.cmd{
 }
 
 div.about{
-    margin-bottom: 25px;
+    margin-bottom: 0;
     height: 15em;
     max-height: 15em;
     overflow: auto;

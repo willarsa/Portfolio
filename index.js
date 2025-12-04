@@ -117,7 +117,7 @@ document.addEventListener("keydown", async function(e) {
             var line = document.createElement("p");
             line.innerHTML = "help: lists all available commands<br>" + 
                         "about: gives a brief description of me and my passions!<br>" + 
-                        "setname [username]: allows you to enter your username for the terminal.<br>" + 
+                        "setname [name]: allows you to enter your name for the terminal.<br>" + 
                         "time: displays the current time.<br>" + 
                         "clear: clears the terminal.<br>" +
                         "echo [sentence]: outputs sentence to the terminal.<br>" + 
